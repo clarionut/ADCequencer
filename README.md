@@ -5,7 +5,7 @@ Most obviously, there are two potentiometers to set CV voltages for each step an
 
 Another significant visible change is the addition of a 'freeze' circuit operated by switch or a gate input allowing the ADC to be stopped under voltage control. This gives real value to the gate output from the VCPS8 (which is on continously through a sequence of active steps) as it allows the sequencer pattern to be updated only when the trigger output is low (generally meaning that no note is sounding). This avoids a serious glitchy effect when a step is turned off while it's active.
 
-Cosmetically, the LED arrays have been replaced by red/white bicolour LEDs associated with each step (red shows the active steps and white the current step) plus a red/blue LED as an indicator for out-of-range pattern control voltages.
+Cosmetically, the LED arrays have been replaced by red/white common-cathode bicolour LEDs associated with each step (red shows the active steps and white the current step) plus a red/blue common-anode LED as an indicator for out-of-range pattern control voltages.
 
 Behind the scenes there are also significant changes:
 - the PCV out-of-range protection circuit in the original is essentially a zener diode crowbar across an op-amp output. This has been replaced by an in-line resistor and Schottky diodes to +5V and ground. The PCV out is not clipped by these, so it's easy to use an external voltmeter to check and adjust the incoming control voltage. The out-of-range LED circuitry is also modified so the LEDs are never reverse biased.
